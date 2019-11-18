@@ -1,5 +1,7 @@
 class Application
     @@items = [Item.new("Apples",5.23), Item.new("Oranges",2.43)] # We need to create items to work with and display.
+
+    def call(env)
         resp= Rack::Response.new # Create a new rack that can serve responses
         req= Rack::Request.new(env) # Create the rack with a way to dynamically filter requests.
 
